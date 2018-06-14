@@ -11,10 +11,11 @@
 
     <link rel="shortcut icon" type="image/ico" href="~/img/favicon-32x32.png" />
 
-  
-    <!-- Fonts from Font Awsome -->
+    
+    <!-- Fonts from Font Awesome -->
     <link rel="stylesheet" href="~/css/font-awesome.min.css">
 
+    
     <link href="~/Scripts/SyntaxHighlighter/styles/shCore.css" rel="stylesheet" />
     <link href="~/Scripts/SyntaxHighlighter/styles/shCoreDefault.css" rel="stylesheet" />
 
@@ -29,8 +30,10 @@
     
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+    
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="~/css/main.css">
+    
     <link href="~/css/StyleSheet.css" rel="stylesheet" />
     <link href="~/css/StyleSheet1.css" rel="stylesheet" />
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -55,24 +58,27 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav" id="main-menu">
                     <li>
-                        <a href="#page-welcome">Home</a>
+                        <a href="~/#page-welcome">Home</a>
                     </li>
                     <li>
-                        <a href="#page-profile">Profile</a>
+                        <a href="~/#page-profile">Profile</a>
+                        @*@Html.ActionLink("Profile", "Index", "Home")*@
                     </li>
                     <li>
-                        <a href="#page-portfolio">Portfolio</a>
+                        <a href="~/#page-portfolio">Portfolio</a>
+
+                        
                     </li>
                     <!--<li><a href="#page-education">Education</a>
                     </li>-->
                     <li>
-                        <a href="#page-experience">Experience</a>
+                        <a href="~/#page-experience">Experience</a>
                     </li>
                     <li>
-                        <a href="#page-skills">skills</a>
+                        <a href="~/#page-skills">skills</a>
                     </li>
                     <li>
-                        <a href="#page-contact">Contact</a>
+                        <a href="~/#page-contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -123,7 +129,7 @@
     <script src="~/js/jquery.magnific-popup.min.js"></script>
     <script src="~/js/waypoints.min.js"></script>
     <script src="~/js/jqBootstrapValidation.js"></script>
-    <script src="~/js/contact_me.js"></script>
+    @*<script src="~/js/contact_me.js"></script>*@
     <script src="~/js/main.js"></script>
 
     @*Implement SyntaxHighlighter*@
@@ -133,8 +139,8 @@
 
    
     @RenderSection("scripts", required: false)
-    @*<script>
-    SyntaxHighlighter.all();
-    </script>*@
+
+   
+   
 </body>
 </html>

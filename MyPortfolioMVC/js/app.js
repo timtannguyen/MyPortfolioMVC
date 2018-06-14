@@ -1,29 +1,43 @@
-﻿    $("#fizzBuzz1").click(function () {
-        var array = []; arr = [];
-        $("#fb input").each(function () {
-            array.push(Number($(this).val()));
-        })
-        for (var i = 1; i <= 100; i++) {
-            if (i % array[0] == 0 && i % array[1] == 0) {
-                arr.push("fizzbuzz");
-            }
+﻿
 
-            else if (i % array[0] == 0) {
-                arr.push("fizz");
-            }
+    $("#fizzBuzz1").click(function () {
+        var num1 = $('#fbNum1').val()
+        var num2 = $('#fbNum2').val()
+        if (num1 < 1 || num2 < 1 || num1 > 100 || num2 > 100)
+        {
+            alert("Please enter the number between 1 to 100")
+            clear('#fbNum1', '#fbNum2')
+        }
+        
+        else{
+            var array = []; arr = [];
+            $("#fb input").each(function () {
+                array.push(Number($(this).val()));
+            })
+            for (var i = 1; i <= 100; i++) {
+                if (i % array[0] == 0 && i % array[1] == 0) {
+                    arr.push("fizzbuzz");
+                }
 
-            else if (i % array[1] == 0) {
-                arr.push("buzz");
-            }
+                else if (i % array[0] == 0) {
+                    arr.push("fizz");
+                }
 
-            else {
-                arr.push(i);
+                else if (i % array[1] == 0) {
+                    arr.push("buzz");
+                }
+
+                else {
+                    arr.push(i);
+                }
             }
         }
         //var arr = arr.toString();
         var arr = arr.join(", ");
         $("#answerFizzBuzz").html(arr);
+    
     });
+
 
     $("#btnClear").click(function () {
         $(".form-horizontal1 input, .form-horizontal1 #answerFizzBuzz").each(function () {
@@ -32,6 +46,10 @@
         })
     })
 
+    function clear(num1, num2) {
+        $(num1).val("");
+        $(num2).val("");
+    }
 
 
     //Palindrome Function
